@@ -16,6 +16,8 @@ $("body").mouseover(function(){
 });
 convertLikes();
 
+
+
 function convertLikes(){
     var likes = document.getElementsByClassName('default_message');
     //var butt = like_buttons[0];
@@ -31,3 +33,4 @@ function convertLikes(){
 	}
     }
 }
+
