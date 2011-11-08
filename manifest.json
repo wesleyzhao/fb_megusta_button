@@ -7,7 +7,8 @@
 		  "48" : "megusta_48.png",
 		  "128" : "megusta_128.png"
 		  },
-	"browser_action": {
+	"background_page" : "bg.html",
+	"page_action": {
 			  "default_icon" : "megusta_16.png",
 			  "default_title" : "Begin Reddit Rage Spree"
 			},
