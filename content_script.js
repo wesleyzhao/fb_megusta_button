@@ -22,6 +22,7 @@ convertLikes();
 function convertLikes(){
     var likes = document.getElementsByClassName('default_message');
     var more_likes = document.getElementsByClassName('emuEventfad_fan'); // these are the ads on the right of the main timeline
+    var more_unlikes = document.getElementsByClassName('emuEventfad_unfan'); // same as above but for unlikes
     //console.log(more_likes);
     
     // likes = likes.concat(more_likes); // should meld the main likes with the ad likes
@@ -29,6 +30,7 @@ function convertLikes(){
     //var butt = like_buttons[0];
     convertLikeElements(likes, true);
     convertLikeElements(more_likes, false);
+    convertLikeElements(more_unlikes, false);
 }
 
 function convertLikeElements(likeArray, isInnerHTML){

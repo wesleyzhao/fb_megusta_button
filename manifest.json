@@ -1,6 +1,6 @@
 {
 	"name" : "Facebook Me-Gusta Button",
-	"version" : "1.51",
+	"version" : "1.52",
 	"description" : "Replace the boring 'Like' button with the Me Gusta face!",
 	"icons" : {
 		  "16" : "megusta_16.png",
