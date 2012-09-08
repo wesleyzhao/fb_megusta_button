@@ -26,7 +26,8 @@ function convertLikes(){
     var more_likes = document.getElementsByClassName('emuEventfad_fan'); // these are the ads on the right of the main timeline
     var more_unlikes = document.getElementsByClassName('emuEventfad_unfan'); // same as above but for unlikes
     //console.log(more_likes);
-    
+    convertNewLikeElements('like_link');
+    convertNewLikeElements('cmnt_like_link');
     // likes = likes.concat(more_likes); // should meld the main likes with the ad likes
 
     //var butt = like_buttons[0];
@@ -36,6 +37,7 @@ function convertLikes(){
     convertLikeElements(more_unlikes, false);
     convertCommentElements(document.getElementsByClassName('comment_link'), false)
     convertLikeElements(page_likes, false);
+    //convertLikeElements(document.getElementsByClassName('like_link'),false)
 
     var like_comment_stuff = document.getElementsByClassName('UFICommentActions');
     var comment_likes = [];
@@ -44,6 +46,17 @@ function convertLikes(){
 	comment_likes.push(el.getElementsByTagName('a')[1]);
     }
     convertLikeElements(comment_likes, false);
+}
+
+function convertNewLikeElements(parentClassName){
+    var new_likes = document.getElementsByClassName(parentClassName)
+    var new_like_els = []
+    for (var i=0; i<new_likes.length;i++){
+	var el = new_likes[i];
+	new_like_els.push(el.getElementsByClassName('default_message')[0]);
+    }
+    convertLikeElements(new_like_els, true);
+    return true
 }
 
 function convertLikeElements(likeArray, isInnerHTML){
